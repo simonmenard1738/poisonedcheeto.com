@@ -22,7 +22,8 @@ var quotes = [
     "What do I have to do to make you care ?",
     "Only God knows I'm scared",
     "Only remember the piece, only remember the work",
-    "And we will spend eternities longing, but only the work persists"
+    "And we will spend eternities longing, but only the work persists",
+"I wish I was more, I wish I did more"
 ]
 
 var tracklist = [
