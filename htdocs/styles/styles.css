@@ -1,0 +1,66 @@
+header{
+    text-align: center;
+    background: linear-gradient(to right, red, rgb(0, 255, 0) , blue, rgb(0, 255, 0), red);
+    background-repeat: repeat-x;
+    background-size:750%; 
+    animation: marquee 10s linear infinite; 
+    overflow: hidden;
+    color: black;
+}
+
+@keyframes marquee {
+  0% {
+    background-position-x: 10000px;
+  }
+  100% {
+    background-position-x: -10000px;
+  }
+}
+
+body{
+    background: black;
+    color: white;
+}
+
+@keyframes scrollBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+#quoteContainer{
+    cursor: crosshair;
+}
+
+/* general */
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto auto;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    justify-content: center;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
+/* imagen */
+
+#mugcup{
+    width: 40px;
+}

@@ -1,4 +1,8 @@
-import './obj/track.js';
+//onload
+window.onload = function(){
+    quoteRenderer();
+}
+
 
 //arr
 var quotes = [
@@ -37,7 +41,7 @@ var tracklist = [
 ]
 
 //str
-var quoteOverride = ""
+var quoteOverride = "July 4th.";
 var currentQuote = "";
 
 //bool
@@ -46,14 +50,30 @@ var overriding = false;
 //int
 var counter = 0;
 
+//obj
+function track(title="default", vocalists={1: "none"}){
+    return {title, vocalists}
+}
+
 //str funct
 function quoteGenerator(){
+    console.log("Generating quote.");
     if(++counter==tracklist.length){
-        currentQuote = quoteOverride;
         overriding = true;
-        counter==0;
+        counter = 0;
+        return quoteOverride; 
     }else{
-        currentQuote = quotes(Math.floor(Math.random()*(tracklist.length + 1)));
+        var tempQuote = quotes[Math.floor(Math.random()*(tracklist.length + 1))];
+        while(currentQuote==tempQuote){
+            var tempQuote = quotes[Math.floor(Math.random()*(tracklist.length + 1))];
+        }
+        currentQuote = tempQuote;
+        return currentQuote
     }
 }
 
+//void funct
+function quoteRenderer(){
+    console.log("Rendering quote.");
+    document.querySelector("#quote").innerHTML = quoteGenerator();
+}
