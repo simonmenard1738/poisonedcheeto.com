@@ -1,13 +1,3 @@
-header{
-    text-align: center;
-    background: linear-gradient(to right, red, rgb(0, 255, 0) , blue, rgb(0, 255, 0), red);
-    background-repeat: repeat-x;
-    background-size:750%; 
-    animation: marquee 10s linear infinite; 
-    overflow: hidden;
-    color: black;
-}
-
 @keyframes marquee {
   0% {
     background-position-x: 10000px;
@@ -17,25 +7,28 @@ header{
   }
 }
 
-body{
-    background: black;
-    color: white;
-}
-
-@keyframes scrollBackground {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: 100% 0;
-  }
-}
-
-#quoteContainer{
-    cursor: crosshair;
+#bio{
+  width: 40vh;
+  text-align: justify;
 }
 
 /* general */
+
+a{
+  text-decoration: none;
+}
+
+body{
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: white;
+    height: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
 
 main{
     display: flex;
@@ -44,23 +37,229 @@ main{
     margin: auto auto;
     flex-direction: row;
     width: 100%;
-    height: 100px;
+    height: 95vh;
+    overflow: auto;
     justify-content: center;
 }
 
 footer{
+    position: fixed;
+    bottom: 0;  
+    left: 0;
+    right: 0;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: black;
+
 }
+
+header{
+    cursor: none;
+    text-align: center;
+    background: linear-gradient(to right, rgb(255, 68, 35), rgb(32, 255, 69) , rgb(23, 123, 255), rgb(32, 255, 69), rgb(255, 68, 35));
+    background-repeat: repeat-x;
+    background-size:750%; 
+    animation: marquee 10s linear infinite; 
+    overflow: hidden;
+    color: black;
+    font-weight: lighter;
+    font-size: 2em;
+    line-height: 0px;
+}
+
+nav{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+  background: linear-gradient(to right, rgb(255, 68, 35), rgb(32, 255, 69) , rgb(23, 123, 255), rgb(32, 255, 69), rgb(255, 68, 35));
+  background-repeat: repeat-x;
+  background-size:750%; 
+  animation: marquee 10s linear infinite; 
+  overflow: hidden;
+  color: black;
+}
+
+nav a{
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+/* classes */
 
 .hidden{
     display: none;
 }
 
-/* imagen */
+.gradientBody{
+  background-color: black;
+  background: linear-gradient(to right, black, rgb(31, 8, 8), rgb(27, 27, 27), rgb(17, 3, 20), black, rgb(31, 8, 8), rgb(17, 6, 17), rgb(1, 4, 34), black);
+    background-repeat: repeat-x;
+    background-size:750%; 
+    animation: marquee 30s linear infinite; 
+}
+
+.overrideBody{
+  background-color: white;
+  color: black;
+}
+
+/* id */
+
+#quote, #presaveText{
+  text-align: center;
+}
 
 #mugcup{
     width: 40px;
+}
+
+#headerText{
+  font-size: 2em;
+}
+
+#quoteContainer, #presaveLink{
+    cursor: crosshair;
+}
+
+#presaveLink{
+  background-color: white;
+  padding: 20px;
+  text-decoration: none;
+  color: black;
+}
+
+#tracklist{
+    position: fixed;
+    top: 25%;
+    line-height: 22px;
+    left: 35%;
+    z-index: -1;
+    opacity: 20%;
+    width: 400px;
+}
+
+#bio{
+  width: 400px;
+  overflow-y: scroll;
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox, Safari 18.2+, Chromium 121+ */
+  line-height: 100%;
+  padding: 0 25%;
+}
+
+#headThing{
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#messageGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 30vh;
+  width: 100vw;
+  margin: 15vw;
+}
+
+#messageGrid a{
+  text-align: justify;
+  background-color: white;
+  color: black;
+  margin: 5px;
+  padding: 100px;
+}
+
+/* slight fixes, subtags */
+footer p{
+  height: 100%;
+  margin: 2px;
+  padding-top: 10px;
+}
+
+/* FONT CLASSES */
+
+.typewriter{
+  font-family: "Source Code Pro", monospace;
+  line-height: 90%;
+  font-size: 16px;
+  letter-spacing: -1.5px;
+}
+
+h1.typewriter{
+  line-height: 50%;
+}
+
+.script{
+  font-family: "Meie Script", cursive;
+  line-height: 50%;
+  font-size: 20px;
+}
+
+.cursive{
+  font-family: "Cedarville Cursive", cursive;
+  line-height: 50%;
+  font-size: 16px;
+}
+
+.modern{
+  font-family: "Forum", serif;
+  line-height: 50%;
+}
+
+.sanserif{
+  font-family: "Libre Franklin", sans-serif;
+  line-height: 50%;
+}
+@media screen and (max-height: 700px) {
+  main{
+    height: 90vh;
+  }
+  
+}
+
+
+@media screen and (max-width: 700px) {
+  #bio{
+    width: 80%;
+    padding: 0 10%;
+  }
+  main{
+    height: 90vh;
+  }
+  header{
+    font-size: 1.5em;
+  }
+  #headerText{
+    font-size: 1.5em;
+  }
+  #messageGrid{
+    margin-top: 20vh;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-height: 700px){
+  #messageGrid{
+    margin-top: 40vh;
+  }
+}
+
+
+
+@media screen and (max-width: 400px) {
+  header{
+    font-size: 1.2em;
+  }
+  #headerText{
+    font-size: 1.2em;
+  }
+  p{
+    font-size: 12px;
+  }
 }
