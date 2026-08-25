@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./styles/styles.css">
+
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="./img/dotcom.ico">
+
+<!-- FONTS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Cedarville+Cursive&family=Exile&family=Forum&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Meie+Script&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+<!-- Tailewind :DD  -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- if you get mad at me for publishing with a test version I DONT CARE -->
+
+<!-- jquerie :DD  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poisonedcheeto.com</title>
+</head>
+<body class="bg-black lg:py-[4vh]">
+    <div id="loader" style="position: fixed;right: 0;bottom: 0;min-width: 100%;min-height: 100vh; z-index: 3;object-fit: cover;" class="bg-black flex align-middle justify-center">
+        <div class="typewriter text-white flex justify-center" style="display: flex;justify-content: center;align-items: center;flex-direction: column;"><p>" welcome "</p><br><img class="w-20" src="./img/mug beer.gif"></div>
+    </div>
+
+    <!-- KEEP GOIN BASED ON THIS EXAMPLE: https://tailwindcss.com/docs/grid-column -->
+    <video src="video/background.mp4" style="position: fixed;right: 0;bottom: 0;min-width: 100%;min-height: 100vh; z-index: 0;object-fit: cover;" disablePictureInPicture autoplay muted loop playsinline class="z-0 w-1/1">Bug</video>
+    <section preload = "auto" id="main_grid_container" style="z-index: 1; position: relative;" class="h-full mx-auto lg:mx-auto w-1/1 lg:max-w-xl sm:w-xl sm:mx-50 py-auto mb-[6.5vh]">
+        <div style="aspect-ratio: 6/1;" class="text-white mb-5 text-center flex flex-col align-items justify-center text-3xl sm:text-4xl"><a href="about.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/cheetobanner.mp4"></a></div>
+        <div style="aspect-ratio: 1/1;"  class="grid grid-cols-1 mx-10 sm:grid-cols-3 sm:mx-0 gap-4 grid-flow-row-dense" id="main_grid">
+            <div style="aspect-ratio: 1/1;" class="text-center col-span-2 row-span-2 aspect-square flex flex-col align-items justify-center"><a href="lltf.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/lltf.mp4">Long live the feeling</video></a></div>
+            <div style="aspect-ratio: 1/1;" class="text-center col-span-2 aspect-square sm:col-span-1 flex flex-col align-items justify-center"><a href="enterprise.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/enterprise.mp4" >!enterprise</video></a></div>
+            <div style="aspect-ratio: 1/1;" class="text-center col-span-2 aspect-square sm:col-span-1 flex flex-col align-items justify-center"><a href="portfolio.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/portfolio.mp4" >Portfolio</video></a></div>
+            <div style="aspect-ratio: 1/1;" class="text-center col-span-2 aspect-square sm:col-span-1 flex flex-col align-items justify-center"><a href="grandpa.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/grandpa.mp4" >grandpa</video></a></div>
+            <div style="aspect-ratio: 1/1;" class="text-center col-span-2 aspect-square sm:col-span-1 flex flex-col align-items justify-center"><a href="dotcom.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/dotcom.mp4" >dot com</video></a></div>
+           <div style="aspect-ratio: 1/1;" class="text-center col-span-2 aspect-square sm:col-span-1 flex flex-col align-items justify-center"><a href="glitchpunk.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/glitchpunk.mp4" >glitchpunk</video></a></div>
+        </div>
+        <footer class="typewriter text-white lg:py-[2vh] bg-[url(./img/footerbackground.png)] bg-cover flex-row"><strong class="pl-2 pr-2">© simon m </strong>
+                <a class="pl-2 pr-2" href="https://instagram.com/poisonedcheeto"><img src="img/instagram-white-icon.png" width="20px"></a>
+                <a class="pl-2 pr-2" href="https://open.spotify.com/playlist/4aMF4yyVafWHlp6fQCqq81?si=5fd40cb4a2bc4c21"><img src="img/Spotify_Primary_Logo_RGB_White.png" width="20px"></a>
+                <a class="pl-2 pr-2" href="mailto:poisonedcheeto@gmail.com"><img src="img/email.webp" width="20px"></a>
+        </footer>
+    </section>
+    <!-- LOADER SCRIP ##FAWK -->
+    <!-- from this mf https://www.youtube.com/watch?v=gttmqvZ4kYc -->
+    <script>
+        $(window).on("load", function(){
+            $("#loader").fadeOut("medium");
+        })
+    </script>
+</body>
+</html>

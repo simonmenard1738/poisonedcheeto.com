@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./styles/styles.css">
+
+<!-- favicon -->
+<link rel="icon" type="image/x-icon" href="./img/dotcom.ico">
+
+<!-- FONTS -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alumni+Sans+SC:ital,wght@0,100..900;1,100..900&family=Cedarville+Cursive&family=Exile&family=Forum&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Meie+Script&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+
+<!-- Tailewind :DD  -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- if you get mad at me for publishing with a test version I DONT CARE -->
+
+<!-- jquerie :DD  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>poisonedcheeto.com</title>
+</head>
+<body class="bg-black lg:py-[4vh]">
+    <div id="loader" style="position: fixed;right: 0;bottom: 0;min-width: 100%;min-height: 100vh; z-index: 3;object-fit: cover;" class="bg-black flex align-middle justify-center">
+        <div class="typewriter text-white flex justify-center" style="display: flex;justify-content: center;align-items: center;flex-direction: column;"><p>" portfolio "</p><br><img class="w-20" src="./img/mug beer.gif"></div>
+    </div>
+    <!-- KEEP GOIN BASED ON THIS EXAMPLE: https://tailwindcss.com/docs/grid-column -->
+    <video preload = "auto" src="video/background.mp4" style="position: fixed;right: 0;bottom: 0;min-width: 100%;min-height: 100vh; z-index: 0;object-fit: cover;" disablePictureInPicture autoplay muted loop playsinline class="z-0 w-1/1">Bug</video>
+    <section id="main_grid_container" style="position: relative;" class="h-full mx-auto sm:mx-auto w-1/1 sm:max-w-xl py-auto mb-[6.5vh]">
+        <div style="aspect-ratio: 6/1;" class="text-white sm:mb-5 text-center flex flex-col align-items justify-center text-3xl sm:text-4xl"><a href="index.html"><video preload = "auto" disablePictureInPicture  autoplay muted loop playsinline src="./video/cheetobanner.mp4"></a></div>
+            <video src="video/portfoliobg.mp4" preload = "auto" style="position: absolute;min-width: 100%; z-index: 0;object-fit: cover;" disablePictureInPicture autoplay muted loop playsinline class="z-0 w-1/1">Bug</video>
+            <div style="aspect-ratio: 1/1; position: absolute;" class="p-6" id="main_grid">
+            
+            <div style="z-index: 1" class="text-4xl sm:text-8xl font-thin text-white serif bg-black sm:max-w-[65%]">Album</div>
+            <div style="z-index: 1" class="text-black italic typewriter text-white bg-black" >Released in 2025. Recorded and produced from early 2023 to 2025. </div>
+            <div style="z-index: 1" class="italic typewriter bg-black pb-4 sm:pb-6" ><a style="color: cyan;" class="underline" href="https://ffm.to/portfolio2025" target="_blank">-> ** listen to "Portfolio" **</a></div>
+        </div>
+        <footer class="typewriter text-white lg:py-[2vh] bg-[url(./img/footerbackground.png)] bg-cover flex-row"><strong class="pl-2 pr-2">© simon m </strong>
+                <a class="pl-2 pr-2" href="https://instagram.com/poisonedcheeto"><img src="img/instagram-white-icon.png" width="20px"></a>
+                <a class="pl-2 pr-2" href="https://open.spotify.com/playlist/4aMF4yyVafWHlp6fQCqq81?si=5fd40cb4a2bc4c21"><img src="img/Spotify_Primary_Logo_RGB_White.png" width="20px"></a>
+                <a class="pl-2 pr-2" href="mailto:poisonedcheeto@gmail.com"><img src="img/email.webp" width="20px"></a>
+        </footer>
+    </section>
+    <!-- LOADER SCRIP ##FAWK -->
+    <!-- from this mf https://www.youtube.com/watch?v=gttmqvZ4kYc -->
+    <script>
+        $(window).on("load", function(){
+            $("#loader").fadeOut("medium");
+        })
+    </script>
+</body>
+</html>
